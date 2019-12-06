@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="products"></ion-back-button>
+        </ion-buttons>
+    <ion-title>{{ product.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item > 
+        <ion-img [src]="product.image"></ion-img> 
+      </ion-item>
+     <div text-center>
+        <ion-label>{{product.name}}</ion-label>
+        <p><strong>{{ product.price | currency }}</strong></p>
+      </div> 
+</ion-content>

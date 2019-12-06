@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="products"></ion-back-button>
+        </ion-buttons>
+    <ion-title>New Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="form" (ngSubmit)="add()">
+      <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Image</ion-label>
+          <ion-input formControlName="image"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Price</ion-label>
+          <ion-input formControlName="price"></ion-input>
+        </ion-item> 
+      <div text-end>
+        <ion-button type="submit">
+          Add Product
+        </ion-button>
+      </div>
+  </form>  
+</ion-content>
